@@ -1,0 +1,67 @@
+## mysql db server ##
+*[ec2-user@ip-172-31-38-248 ~]$* **hostname**
+
+	ip-172-31-38-248.us-west-2.compute.internal
+
+*[ec2-user@ip-172-31-38-248 ~]$* **mysql -u root -p**
+
+	Enter password:
+	Welcome to the MySQL monitor.  Commands end with ; or \g.
+	Your MySQL connection id is 7
+	Server version: 5.7.20 MySQL Community Server (GPL)
+	
+	Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.
+	
+	Oracle is a registered trademark of Oracle Corporation and/or its
+	affiliates. Other names may be trademarks of their respective
+	owners.
+	
+	Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+	
+	mysql> status
+	--------------
+	mysql  Ver 14.14 Distrib 5.7.20, for Linux (x86_64) using  EditLine wrapper
+	
+	Connection id:          7
+	Current database:
+	Current user:           root@localhost
+	SSL:                    Not in use
+	Current pager:          stdout
+	Using outfile:          ''
+	Using delimiter:        ;
+	Server version:         5.7.20 MySQL Community Server (GPL)
+	Protocol version:       10
+	Connection:             Localhost via UNIX socket
+	Server characterset:    latin1
+	Db     characterset:    latin1
+	Client characterset:    utf8
+	Conn.  characterset:    utf8
+	UNIX socket:            /var/lib/mysql/mysql.sock
+	Uptime:                 5 min 54 sec
+	
+	Threads: 1  Questions: 35  Slow queries: 0  Opens: 115  Flush tables: 1  Open tables: 108  Queries per second avg: 0.098
+	--------------
+	
+	mysql> show databases
+	    -> ;
+	+--------------------+
+	| Database           |
+	+--------------------+
+	| information_schema |
+	| amon               |
+	| hue                |
+	| metastore          |
+	| mysql              |
+	| nav                |
+	| navms              |
+	| oozie              |
+	| performance_schema |
+	| rman               |
+  | scm                |
+	| sentry             |
+	| sys                |
+	+--------------------+
+	12 rows in set (0.00 sec)
+	
+	mysql> exit
+	Bye
