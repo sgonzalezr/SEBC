@@ -1,0 +1,66 @@
+
+*[ec2-user@ip-172-31-38-238 yum.repos.d]$* **ls /etc/yum.repos.d**
+
+	cloudera-manager.repo        redhat-rhui-client-config.repo
+	mysql-community.repo         redhat-rhui.repo
+	mysql-community-source.repo  rhui-load-balancers.conf
+	redhat.repo
+
+*[ec2-user@ip-172-31-38-238 ~]$* ** sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql -h ip-172-31-38-248.us-west-2.compute.internal -uroot -pXanadu02$ --scm-host ip-172-31-38-238.us-west-2.compute.internal scm scm Scm_password1$**
+
+	JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
+	Verifying that we can write to /etc/cloudera-scm-server
+	Fri Dec 01 18:39:56 UTC 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+	[                          main] DbProvisioner                  ERROR Exception when creating/dropping database with user 'root' and jdbc url 'jdbc:mysql://ip-172-31-38-248.us-west-2.compute.internal/?useUnicode=true&characterEncoding=UTF-8'
+	java.sql.SQLException: Access denied for user 'root'@'ip-172-31-38-238.us-west-2.compute.internal' (using password: YES)
+	        at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2191)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)[mysql-connector-java.jar:5.1.44]
+	        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[:1.7.0_67]
+	        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)[:1.7.0_67]
+	        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[:1.7.0_67]
+	        at java.lang.reflect.Constructor.newInstance(Constructor.java:526)[:1.7.0_67]
+	        at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)[mysql-connector-java.jar:5.1.44]
+	        at java.sql.DriverManager.getConnection(DriverManager.java:571)[:1.7.0_67]
+	        at java.sql.DriverManager.getConnection(DriverManager.java:215)[:1.7.0_67]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.executeSql(DbProvisioner.java:283)[db-common-5.11.2.jar:]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.doMain(DbProvisioner.java:95)[db-common-5.11.2.jar:]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.main(DbProvisioner.java:110)[db-common-5.11.2.jar:]
+	[                          main] DbProvisioner                  ERROR Stack Trace:
+	java.sql.SQLException: Access denied for user 'root'@'ip-172-31-38-238.us-west-2.compute.internal' (using password: YES)
+	        at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2191)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)[mysql-connector-java.jar:5.1.44]
+	        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[:1.7.0_67]
+	        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)[:1.7.0_67]
+	        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[:1.7.0_67]
+	        at java.lang.reflect.Constructor.newInstance(Constructor.java:526)[:1.7.0_67]
+	        at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)[mysql-connector-java.jar:5.1.44]
+	        at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)[mysql-connector-java.jar:5.1.44]
+	        at java.sql.DriverManager.getConnection(DriverManager.java:571)[:1.7.0_67]
+	        at java.sql.DriverManager.getConnection(DriverManager.java:215)[:1.7.0_67]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.executeSql(DbProvisioner.java:283)[db-common-5.11.2.jar:]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.doMain(DbProvisioner.java:95)[db-common-5.11.2.jar:]
+	        at com.cloudera.enterprise.dbutil.DbProvisioner.main(DbProvisioner.java:110)[db-common-5.11.2.jar:]
+	--> Error 1, giving up (use --force if you wish to ignore the error)
+
+### Se edita manualmente el archivo de Properties ###
