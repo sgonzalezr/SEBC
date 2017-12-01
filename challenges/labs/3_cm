@@ -1,0 +1,281 @@
+*[ec2-user@ip-172-31-38-238 ~]$*  **hdfs dfs -ls /user**
+	Found 8 items
+	drwxr-xr-x   - haley      haley               0 2017-12-01 19:48 /user/haley
+	drwxrwxrwx   - mapred     hadoop              0 2017-12-01 19:44 /user/history
+	drwxrwxr-t   - hive       hive                0 2017-12-01 19:45 /user/hive
+	drwxrwxr-x   - hue        hue                 0 2017-12-01 19:45 /user/hue
+	drwxrwxr-x   - oozie      oozie               0 2017-12-01 19:45 /user/oozie
+	drwxr-xr-x   - saturn     saturn              0 2017-12-01 19:48 /user/saturn
+	drwxr-xr-x   - sgonzalezr sgonzalezr          0 2017-12-01 19:48 /user/sgonzalezr
+	drwxr-x--x   - spark      spark               0 2017-12-01 19:44 /user/spark
+
+
+**https://github.com/sgonzalezr/SEBC/blob/master/challenges/challenges.md**
+
+	{
+	  "items" : [ {
+	    "hostId" : "bac0d57f-12f4-4b07-a677-d89b966cd9ba",
+	    "ipAddress" : "172.31.35.37",
+	    "hostname" : "ip-172-31-35-37.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/bac0d57f-12f4-4b07-a677-d89b966cd9ba",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "6ff18b02-016e-4dcf-be00-67e1c41e8a3c",
+	    "ipAddress" : "172.31.38.238",
+	    "hostname" : "ip-172-31-38-238.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/6ff18b02-016e-4dcf-be00-67e1c41e8a3c",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "10dc45ca-293d-492c-8e34-447a04e8d6fb",
+	    "ipAddress" : "172.31.38.248",
+	    "hostname" : "ip-172-31-38-248.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/10dc45ca-293d-492c-8e34-447a04e8d6fb",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "329e7012-d06b-41f4-af4c-d2c350734ead",
+	    "ipAddress" : "172.31.43.67",
+	    "hostname" : "ip-172-31-43-67.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/329e7012-d06b-41f4-af4c-d2c350734ead",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  } ]
+	}
+
+** http://ec2-54-202-143-167.us-west-2.compute.amazonaws.com:7180/api/v8/clusters/sgonzalezr/services **
+
+	{
+	  "items" : [ {
+	    "hostId" : "bac0d57f-12f4-4b07-a677-d89b966cd9ba",
+	    "ipAddress" : "172.31.35.37",
+	    "hostname" : "ip-172-31-35-37.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/bac0d57f-12f4-4b07-a677-d89b966cd9ba",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "6ff18b02-016e-4dcf-be00-67e1c41e8a3c",
+	    "ipAddress" : "172.31.38.238",
+	    "hostname" : "ip-172-31-38-238.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/6ff18b02-016e-4dcf-be00-67e1c41e8a3c",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "10dc45ca-293d-492c-8e34-447a04e8d6fb",
+	    "ipAddress" : "172.31.38.248",
+	    "hostname" : "ip-172-31-38-248.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/10dc45ca-293d-492c-8e34-447a04e8d6fb",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  }, {
+	    "hostId" : "329e7012-d06b-41f4-af4c-d2c350734ead",
+	    "ipAddress" : "172.31.43.67",
+	    "hostname" : "ip-172-31-43-67.us-west-2.compute.internal",
+	    "rackId" : "/default",
+	    "hostUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/hostRedirect/329e7012-d06b-41f4-af4c-d2c350734ead",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "commissionState" : "COMMISSIONED",
+	    "numCores" : 8,
+	    "numPhysicalCores" : 4,
+	    "totalPhysMemBytes" : 31453491200
+	  } ]
+	}
+
+** http://ec2-54-202-143-167.us-west-2.compute.amazonaws.com:7180/api/v8/clusters/sgonzalezr/services **
+
+	{
+	  "items" : [ {
+	    "name" : "hive",
+	    "type" : "HIVE",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/hive",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "HIVE_HIVEMETASTORES_HEALTHY",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HIVE_HIVESERVER2S_HEALTHY",
+	      "summary" : "GOOD"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "Hive"
+	  }, {
+	    "name" : "zookeeper",
+	    "type" : "ZOOKEEPER",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/zookeeper",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "ZOOKEEPER_CANARY_HEALTH",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "ZOOKEEPER_SERVERS_HEALTHY",
+	      "summary" : "GOOD"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "ZooKeeper"
+	  }, {
+	    "name" : "hue",
+	    "type" : "HUE",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/hue",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "HUE_HUE_SERVERS_HEALTHY",
+	      "summary" : "GOOD"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "Hue"
+	  }, {
+	    "name" : "oozie",
+	    "type" : "OOZIE",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/oozie",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "OOZIE_OOZIE_SERVERS_HEALTHY",
+	      "summary" : "GOOD"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "Oozie"
+	  }, {
+	    "name" : "yarn",
+	    "type" : "YARN",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/yarn",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "YARN_JOBHISTORY_HEALTH",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "YARN_NODE_MANAGERS_HEALTHY",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "YARN_RESOURCEMANAGERS_HEALTH",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "YARN_USAGE_AGGREGATION_HEALTH",
+	      "summary" : "DISABLED"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "YARN (MR2 Included)"
+	  }, {
+	    "name" : "spark_on_yarn",
+	    "type" : "SPARK_ON_YARN",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/spark_on_yarn",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "Spark"
+	  }, {
+	    "name" : "hdfs",
+	    "type" : "HDFS",
+	    "clusterRef" : {
+	      "clusterName" : "cluster"
+	    },
+	    "serviceUrl" : "http://ip-172-31-38-238.us-west-2.compute.internal:7180/cmf/serviceRedirect/hdfs",
+	    "serviceState" : "STARTED",
+	    "healthSummary" : "GOOD",
+	    "healthChecks" : [ {
+	      "name" : "HDFS_BLOCKS_WITH_CORRUPT_REPLICAS",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_CANARY_HEALTH",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_DATA_NODES_HEALTHY",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_FREE_SPACE_REMAINING",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_HA_NAMENODE_HEALTH",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_MISSING_BLOCKS",
+	      "summary" : "GOOD"
+	    }, {
+	      "name" : "HDFS_UNDER_REPLICATED_BLOCKS",
+	      "summary" : "GOOD"
+	    } ],
+	    "configStalenessStatus" : "FRESH",
+	    "clientConfigStalenessStatus" : "FRESH",
+	    "maintenanceMode" : false,
+	    "maintenanceOwners" : [ ],
+	    "displayName" : "HDFS"
+	  } ]
+	}
