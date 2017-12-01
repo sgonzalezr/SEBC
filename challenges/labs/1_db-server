@@ -57,7 +57,6 @@
 	| oozie              |
 	| performance_schema |
 	| rman               |
-  | scm                |
 	| sentry             |
 	| sys                |
 	+--------------------+
