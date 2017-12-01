@@ -1,4 +1,161 @@
 
+## Create Users ##
+
+### ec2-user@ip-172-31-38-248 ###
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo useradd -u 2800 saturn**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo useradd -u 2900 haley**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo groupadd comets**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo groupadd planets**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo usermod -a -G comets haley**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo usermod -a -G planets saturn**
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo cat /etc/passwd | grep saturn**
+
+	saturn:x:2800:2800::/home/saturn:/bin/bash
+
+*[ec2-user@ip-172-31-38-248 ~]$* **sudo cat /etc/passwd | grep haley**
+
+	haley:x:2900:2900::/home/haley:/bin/bash
+
+*[ec2-user@ip-172-31-38-248 ~]$* **id saturn**
+
+	uid=2800(saturn) gid=2800(saturn) groups=2800(saturn),2902(planets)
+
+*[ec2-user@ip-172-31-38-248 ~]$* **id haley**
+
+	uid=2900(haley) gid=2900(haley) groups=2900(haley),2901(comets)
+
+*[ec2-user@ip-172-31-38-248 ~]$*
+
+
+### ec2-user@ip-172-31-38-238 ###
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo useradd -u 2800 saturn**
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo useradd -u 2900 haley**
+
+[ec2-user@ip-172-31-38-238 ~]$
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo groupadd comets**
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo groupadd planets**
+
+[ec2-user@ip-172-31-38-238 ~]$
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo usermod -a -G comets haley**
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo usermod -a -G planets saturn**
+
+[ec2-user@ip-172-31-38-238 ~]$
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo cat /etc/passwd | grep saturn**
+
+	saturn:x:2800:2800::/home/saturn:/bin/bash
+
+[ec2-user@ip-172-31-38-238 ~]$ **sudo cat /etc/passwd | grep haley**
+
+	haley:x:2900:2900::/home/haley:/bin/bash
+
+[ec2-user@ip-172-31-38-238 ~]$
+
+[ec2-user@ip-172-31-38-238 ~]$ **id saturn**
+
+	uid=2800(saturn) gid=2800(saturn) groups=2800(saturn),2902(planets)
+
+[ec2-user@ip-172-31-38-238 ~]$ **id haley**
+
+	uid=2900(haley) gid=2900(haley) groups=2900(haley),2901(comets)
+
+[ec2-user@ip-172-31-38-238 ~]$
+
+
+### ec2-user@ip-172-31-43-67 ###
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo useradd -u 2800 saturn**
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo useradd -u 2900 haley**
+
+[ec2-user@ip-172-31-43-67 ~]$
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo groupadd comets**
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo groupadd planets**
+
+[ec2-user@ip-172-31-43-67 ~]$
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo usermod -a -G comets haley**
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo usermod -a -G planets saturn**
+
+[ec2-user@ip-172-31-43-67 ~]$
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo cat /etc/passwd | grep saturn**
+
+	saturn:x:2800:2800::/home/saturn:/bin/bash
+
+[ec2-user@ip-172-31-43-67 ~]$ **sudo cat /etc/passwd | grep haley**
+
+	haley:x:2900:2900::/home/haley:/bin/bash
+
+[ec2-user@ip-172-31-43-67 ~]$
+
+[ec2-user@ip-172-31-43-67 ~]$ **id saturn**
+
+	uid=2800(saturn) gid=2800(saturn) groups=2800(saturn),2902(planets)
+
+[ec2-user@ip-172-31-43-67 ~]$ **id haley**
+
+	uid=2900(haley) gid=2900(haley) groups=2900(haley),2901(comets)
+
+[ec2-user@ip-172-31-43-67 ~]$
+
+
+### ec2-user@ip-172-31-35-37 ###
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo useradd -u 2800 saturn**
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo useradd -u 2900 haley**
+
+[ec2-user@ip-172-31-35-37 ~]$
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo groupadd comets**
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo groupadd planets**
+
+[ec2-user@ip-172-31-35-37 ~]$
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo usermod -a -G comets haley**
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo usermod -a -G planets saturn**
+
+[ec2-user@ip-172-31-35-37 ~]$
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo cat /etc/passwd | grep saturn**
+
+	saturn:x:2800:2800::/home/saturn:/bin/bash
+
+[ec2-user@ip-172-31-35-37 ~]$ **sudo cat /etc/passwd | grep haley**
+
+	haley:x:2900:2900::/home/haley:/bin/bash
+
+[ec2-user@ip-172-31-35-37 ~]$
+
+[ec2-user@ip-172-31-35-37 ~]$ **id saturn**
+
+	uid=2800(saturn) gid=2800(saturn) groups=2800(saturn),2902(planets)
+
+[ec2-user@ip-172-31-35-37 ~]$ **id haley**
+
+	uid=2900(haley) gid=2900(haley) groups=2900(haley),2901(comets)
+
+[ec2-user@ip-172-31-35-37 ~]$
+
 ### Cloud provider###
 	AWS
 
