@@ -1,3 +1,4 @@
+
 ### Cloud provider###
 	AWS
 
@@ -20,6 +21,7 @@
 
 ### The command and output for yum repolist enabled ###
 *[ec2-user@ip-172-31-38-248 ~]$* **sudo yum repolist enabled**
+
 	Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
 	https://rhui2-cds02.us-west-2.aws.ce.redhat.com/pulp/repos//rhui-client-config/rhel/server/7/x86_64/os/repodata/repomd.xml: [Errno 14] HTTPS Error 401 - Unauthorized
 	Trying other mirror.
